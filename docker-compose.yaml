@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: go-htmx
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    command: air -c .air.toml
